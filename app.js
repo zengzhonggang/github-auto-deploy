@@ -5,7 +5,6 @@ var url = require('url');
 var config = require('./config');
 var handler = createHandler({ path: '/webhook', secret: config.secret })
 http.createServer(function (req, res) {
-    res.end(req.url)
   handler(req, res, function (err) {
     res.statusCode = 404
     res.end('no such location')
