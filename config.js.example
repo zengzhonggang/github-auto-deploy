@@ -1,0 +1,6 @@
+var config = {
+    novel_node:{
+        code_path:''
+    }
+}
+module.exports = config
