@@ -1,4 +1,5 @@
 var config = {
+    secrt:'',
     novel_node:{
         code_path:''
     }
