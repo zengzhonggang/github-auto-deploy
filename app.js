@@ -3,14 +3,13 @@ var createHandler = require('github-webhook-handler')
 var spawn = require('child_process').spawn;
 var url = require('url');
 var config = require('./config');
-var handler = createHandler({ path: '/webhook', secret: config.secret })
+var handler = createHandler({ path: '/webhook', secret: 'zzer' })
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
     res.statusCode = 404
     res.end('no such location')
   })
 }).listen(2222)
-
 handler.on('error', function (err) {
   console.error('Error:', err.message)
 })
